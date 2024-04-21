@@ -1,8 +1,8 @@
 :root {
-  --title: #44546A;
+  --title: #ffffff;
   --background: #FFFFFF;
-  --primary: #F40273;
-  --link: #112BDA;
+  --primary: #9000c9;
+  --secondary: #da11a8;
 }
 
 * {
@@ -16,13 +16,23 @@ html, body, input, textare {
   font-family: "Inter", sans-serif;
 }
 
-
 body {
   height: 100vh;
   width: 100vw;
-  background-color: #F9F9F9;
+  background-color: #000000;
   position: relative;
 }
+
+.title {
+  font-size: 75px;
+}
+
+.PRO {
+  background-image: linear-gradient(45deg, rgba(120,0,255,1) 0%, rgba(222,0,255,1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .container {
   height: 100%;
   width: 100%;
@@ -44,7 +54,7 @@ header {
 
 header h1 {
   font-size: 32px;
-  color: #44546A;
+  color: var(--title);
   margin-top: 16px;
 }
 
@@ -65,7 +75,7 @@ header h1 {
 }
 
 .form button {
-  background: #F40273;
+  background: var(--secondary);
   color: #fff;
   padding: 16px 32px;
   border-radius: 5px; 
@@ -90,13 +100,10 @@ header h1 {
 }
 
 .list div button {
-  color: #F40273;
+  color: var(--secondary);
   border: 0;
   background: transparent;
   cursor: pointer;
-}
-.list div button:hover {
-  filter: brightness(0.8);
 }
 
 .list ul {
@@ -105,47 +112,27 @@ header h1 {
 
 .list ul li {
   padding: 16px;
-  background: #fff;
+  background: var(--primary);
   border-radius: 5px;
-  color: #44546A;
+  color: #ffffff;
   margin-bottom: 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .list ul li button {
   background: transparent;
   border: 0;
   cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
 }
+
+.list ul li span {
+  flex-grow: 1;
+}
+
 /* .list ul li + li {
   margin-top: 16px;
 } */
-
-.news {
-  position: absolute;
-  bottom: 32px;
-  right: 32px;
-  width: 322px;
-  height: 141px;
-  background: #fff;
-  box-shadow: 7.9px 15.8px 15.8px hsl(0deg 0% 0% / 0.25);
-}
-
-.news div {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  font-size: 12px;
-  background: #F5F5F5;
-  color: #112BDA;
-  font-weight: bold;
-}
-
-.news p {
-  padding: 16px;
-  width: 100%;
-  text-overflow: ellipsis;
-  font-size: 14px;
-  color: #44546A;
-}
